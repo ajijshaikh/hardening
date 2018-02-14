@@ -1,0 +1,28 @@
+#!/bin/sh
+PREREQ=""
+prereqs()
+{
+   echo "$PREREQ"
+}
+
+
+RC=0
+
+case $1 in
+prereqs)
+   prereqs
+   exit 0
+   ;;
+esac
+
+
+if [ "$RC" -ne 0 ]
+then
+	exit "$RC"
+fi
+
+. /usr/share/initramfs-tools/hook-functions
+
+mkdir -p ${DESTDIR}/etc
+cp -p /usr/local/etc/auto_unlock.conf ${DESTDIR}/etc/auto_unlock.conf
+
