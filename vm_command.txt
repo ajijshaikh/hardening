@@ -1,0 +1,1 @@
+sudo usermod -a -G vboxusers ajij - to detect the pendrives in the vm you need to run this command in the main local machine and then you can attach the pendrive and then you were able to detect it in to the virtual machine by ticking the option and unticking it goes into the local machine again.
